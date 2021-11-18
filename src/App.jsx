@@ -27,7 +27,8 @@ import {CartProvider} from './context/cartContext';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 //Css particular
-import './components/assets/styles/app.css'
+import './assets/styles/app.css'
+import './assets/styles/colors.css'
 
 
 const App = () => {
