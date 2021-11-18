@@ -1,0 +1,28 @@
+
+
+.ItemList {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2vw;
+  height: fit-content;
+}
+
+@media screen and (min-width: 540px) {
+  .ItemList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 740px) {
+  .ItemList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .ItemList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
