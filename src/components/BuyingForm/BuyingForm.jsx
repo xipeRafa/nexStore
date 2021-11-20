@@ -104,9 +104,10 @@ const BuyingForm = () => {
             let order = 
             {
                 buyer: {
-                    name: `${data.name} ${data.lastname}`,
+                    name:  data.name,
                     phone: data.telephone,
-                    email: data.email
+                    email: data.email,
+                    adress: data.adress
                 },
                 items: cart.map(item => ({
                     id: item.id,
@@ -172,20 +173,24 @@ const BuyingForm = () => {
                     </div>
 
                     <div className="input-field">
-                        <i className="material-icons prefix">account_circle</i>
+                        <i className="material-icons prefix">directions</i>
                         <input 
-                            name="lastname" 
-                            id="lastname" 
+                            name="adress" 
+                            id="adress" 
                             type="text" 
                             className="validate" 
                             autoComplete="none" 
                             ref={register({
-                                required: "Ingresar apellido", minLength: {value:2, message:"Minimo 2 caracteres"}, maxLength: {value:12, message:"Maximo 12 caracteres"}
+                                required: "Ingresar direccion", minLength: {value:2, message:"Minimo 2 caracteres"}, maxLength: {value:60, message:"Maximo 60 caracteres"}
                             })}
                         />
-                        <label htmlFor="lastname" >Apellido</label>
+                        <label htmlFor="adress">Direccion</label>
                         { errors.lastname && <small>{ errors.lastname.message }</small> }
                     </div>
+
+
+
+
 
                     <div className="input-field">
                         <i className="material-icons prefix">phone</i>
