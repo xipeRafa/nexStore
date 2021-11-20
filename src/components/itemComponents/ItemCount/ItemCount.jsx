@@ -28,7 +28,7 @@ const ItemCount = ({  setIsAdded, initial, stock, item }) => {
 
     const toasti = () => {toast(`${counter} ${counter>1 ? 'items agregados': 'item agregado'} al carrito `, {
         position: "top-left",
-        autoClose: 2000,
+        autoClose: 4000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: false,
@@ -67,7 +67,7 @@ const ItemCount = ({  setIsAdded, initial, stock, item }) => {
                 <div className="counter-container">
 
                     <button onClick = { removeItem } className="waves-effect waves-light btn counter-btn" disabled={ counter <= initial }><p>-</p></button>
-                    <p className="counter-value" onChange = { isItemAlreadyInCart } >
+                    <p className="counter-value " onChange = { isItemAlreadyInCart } >
                         {
                             (isIn !== undefined && isIn?.quantity === isIn?.stock ) ?
                             "No hay mas stock"
@@ -94,10 +94,7 @@ const ItemCount = ({  setIsAdded, initial, stock, item }) => {
                     disabled={stock === 0 || (isIn !== undefined && isIn?.quantity === isIn?.stock )} //Deshabilito la opcion de comprar mas si es que ya se llego al limite de stock 
                 >
                     {
-                        isIn !== undefined  ? 
-                        `Agregar ${counter} más` 
-                        : 
-                        'Agregar al carrito'
+                        isIn !== undefined  ? `Agregar ${counter} más` : 'Agregar al carrito'
                     }
                     
                 </button>

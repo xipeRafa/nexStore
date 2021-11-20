@@ -9,9 +9,7 @@
   overflow: hidden;
   cursor: pointer;
   transition: .3s all;
-  width: auto;
-  max-width: 45vw;
-  height: auto;
+  width: 50vw;
   max-height: fit-content;
   margin-bottom: 40px;
 }
@@ -20,12 +18,9 @@
   box-shadow: 0px 0px 13px 2px #000000;
 }
 img {
-  width: 100%;
- /* margin-left: 10%;
-  padding-top: 10%;
-  */
-  height: 150px;
+  height: 225px;
   user-select: none;
+  margin-top: 20px;
 }
 .info-container {
   padding: 5px 10px;
@@ -59,8 +54,5 @@ img {
 @media screen and (min-width: 1020px) {
   .card-container {
       max-width: 17vw;
- }
-img {
-      height: 175px;
  }
 }
