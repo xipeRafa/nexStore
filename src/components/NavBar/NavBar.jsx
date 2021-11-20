@@ -7,7 +7,7 @@ import CartWidget from "../CartWidget/CartWidget";
 import './NavBar.css';
 import logo from '../../imgs/title.jpg'
 //Routing
-import {NavLink} from 'react-router-dom'
+import {NavLink, Route, Redirect} from 'react-router-dom'
 
 
 const NavBar = () => {
@@ -23,6 +23,9 @@ const NavBar = () => {
                     <a href="/#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                     <ul className="right hide-on-med-and-down">
                         <li>
+                            <NavLink to="/" className="navlink"> INICIO </NavLink>
+                        </li>
+                        <li>
                             <NavLink to="/categories/suplementos" className="navlink"> SUPLEMENTOS </NavLink>
                         </li>
                         <li>
@@ -31,6 +34,7 @@ const NavBar = () => {
                         <li>
                             <NavLink to="/my-orders" className="navlink " > PEDIDOS </NavLink>
                         </li>
+                        <Route path="*"> <Redirect to="/" /> </Route>
                     </ul>
                     {/* Icono de carrito de compras */}
                     <CartWidget />
@@ -50,7 +54,7 @@ const NavBar = () => {
 
                 <li>
                     <NavLink to="/" className="navlink" exact >
-                                VER TIENDA
+                                INICIO
                     </NavLink>
                 </li>
             </ul>
