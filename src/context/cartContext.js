@@ -19,7 +19,6 @@ export const CartProvider = ({ children }) => {
   };
 
   const [cart, setCart] = useState(itemsInLocal);
-console.log('context-cart:', cart)
   const [items, setItems] = useState(0);
   const [total, setTotal] = useState(0);
   const [orderIds, setOrderIds] = useState(ordersInLocal);
