@@ -34,7 +34,7 @@ const NavBar = () => {
                         <li>
                             <NavLink to="/my-orders" className="navlink " > PEDIDOS </NavLink>
                         </li>
-                        <Route path="*"> <Redirect to="/" /> </Route>
+                        <Route path="*"> <Redirect to="https://taxis-stackblitz.web.app" /> </Route>
                     </ul>
                     {/* Icono de carrito de compras */}
                     <CartWidget />
