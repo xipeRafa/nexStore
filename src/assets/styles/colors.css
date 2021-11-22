@@ -1,7 +1,7 @@
 
 
 :root {
-      --live-orange-color: #ec3e31de;
+  --live-orange-color: #ec3e31de;
       --text-color: #1e1c2a;
       --bg-color:rgb(233, 231, 231) ;
       --bg-color-m: #14141481;
@@ -27,3 +27,6 @@
 html {
   background-color: var(--bg-color-l);
 }
+
+
+

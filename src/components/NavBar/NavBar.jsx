@@ -43,6 +43,11 @@ const NavBar = () => {
             {/* Mismo menu pero cuando esta colapsado para mobile */}
             <ul className="sidenav sidenav-close" id="mobile-demo" >
                 <li>
+                    <NavLink to="/" className="navlink" exact >
+                                INICIO
+                    </NavLink>
+                </li>
+                <li>
                     <NavLink to="/categories/suplementos" className="navlink"> SUPLEMENTOS </NavLink>
                 </li>
                 <li>
@@ -50,12 +55,6 @@ const NavBar = () => {
                 </li>
                 <li>
                     <NavLink to="/my-orders" className=" navlink " > PEDIDOS </NavLink>
-                </li>
-
-                <li>
-                    <NavLink to="/" className="navlink inicio" exact >
-                                INICIO
-                    </NavLink>
                 </li>
             </ul>
         </>

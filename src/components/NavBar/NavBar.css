@@ -1,17 +1,22 @@
-nav{
-   position: fixed;
-   top: 0;
+nav {
+  position: fixed;
+  top: 0;
 }
 
 nav .nav-wrapper {
   background-color: var(--black-color);
   padding: 0px 20px;
-/*   border-bottom: solid 4px var(--live-orange-color); */
   height: 60px;
 }
 
-nav .nav-wrapper .brand-logo img{
-  width:200px;
+@media screen and (max-width: 600px) {
+  nav .nav-wrapper {
+    border-bottom: solid 4px #ee6e73;
+  }
+}
+
+nav .nav-wrapper .brand-logo img {
+  width: 200px;
   height: 40px;
   margin-top: 10px;
 }
@@ -40,7 +45,8 @@ nav .nav-wrapper ul li .active {
 }
 
 .sidenav {
-  background-color: var(--live-orange-color);
+  margin-top: 60px;
+  background-color: #d3453b;
 }
 
 .sidenav li .navlink {
@@ -54,16 +60,16 @@ nav .nav-wrapper ul li .active {
 .sidenav li .active {
   background-color: rgba(0, 0, 0, 0.097);
 }
-.sidenav-trigger i{
+.sidenav-trigger i {
   color: var(--live-orange-color);
-  font-size: 36px!important;
+  font-size: 36px !important;
   margin-left: -14px;
 }
 
-.inicio{
-  color: white!important;
+.inicio {
+  color: white !important;
 }
 
-.inicio:hover{
-  color: var(--live-orange-color)!important; 
+.inicio:hover {
+  color: var(--live-orange-color) !important;
 }

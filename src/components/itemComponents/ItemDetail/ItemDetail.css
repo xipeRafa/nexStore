@@ -23,7 +23,7 @@
   width: 95%;
   height: 490px;
   background-color: black;
-  border-top: 1px solid black;
+  border: 2px solid black;
 }
 .item-detail .container-one .img-counter-container .small-images-big-image-container {
   display: flex;
