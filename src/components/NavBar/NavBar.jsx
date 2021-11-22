@@ -23,7 +23,7 @@ const NavBar = () => {
                     <a href="/#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                     <ul className="right hide-on-med-and-down">
                         <li>
-                            <NavLink to="/" className="navlink"> INICIO </NavLink>
+                            <NavLink to="/" className="navlink inicio"> INICIO </NavLink>
                         </li>
                         <li>
                             <NavLink to="/categories/suplementos" className="navlink"> SUPLEMENTOS </NavLink>
@@ -53,7 +53,7 @@ const NavBar = () => {
                 </li>
 
                 <li>
-                    <NavLink to="/" className="navlink" exact >
+                    <NavLink to="/" className="navlink inicio" exact >
                                 INICIO
                     </NavLink>
                 </li>

@@ -59,3 +59,11 @@ nav .nav-wrapper ul li .active {
   font-size: 36px!important;
   margin-left: -14px;
 }
+
+.inicio{
+  color: white!important;
+}
+
+.inicio:hover{
+  color: var(--live-orange-color)!important; 
+}

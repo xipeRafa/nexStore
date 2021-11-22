@@ -1,7 +1,7 @@
 
 
 :root {
-      --live-orange-color: #ec3d31;
+      --live-orange-color: #ec3e31de;
       --text-color: #1e1c2a;
       --bg-color:rgb(233, 231, 231) ;
       --bg-color-m: #14141481;
@@ -18,7 +18,7 @@
       --dark-brown-text-color:#292021;
       
       --dark-gray-text-color:#3c3c3c;
-      --light-gray-color:#7c7c7c;
+      --light-gray-color:#7c7c7c70;
       -—light-gray-hover-color:#727074;
     
     }

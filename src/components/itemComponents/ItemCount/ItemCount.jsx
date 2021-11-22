@@ -98,9 +98,11 @@ const ItemCount = ({  setIsAdded, initial, stock, item }) => {
                     }
                     
                 </button>
+               
             </div>
         </>
     )
 }
+
 
 export default ItemCount

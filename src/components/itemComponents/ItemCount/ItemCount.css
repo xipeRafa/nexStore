@@ -2,23 +2,27 @@
 .item-counter {
   display: flex;
   flex-direction: column;
-  background-color: #7A7A7A;
+  background-color: black;
   width: 100%;
   height: auto;
   padding: 5px;
   border-radius: 0px 0px 2px 2px;
-  box-shadow: 0px 4px 4px -1px #1f2226;
+  margin-top: 22px;
+  padding-bottom: 10px;
 }
 
 .item-counter .counter-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 98%;
+  margin-left: 1%;
   height: 35px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
   border-radius: 6px;
   padding: 0 .3rem;
+  border: 2px solid rgba(255, 255, 255, 0.663);
+  margin-bottom: 11px;
 }
 
 .item-counter .counter-container .counter-btn {
@@ -26,28 +30,30 @@
   justify-content: center;
   align-items: center;
   width: 50px;
-  height: 1.9rem;
+  height: 1.8rem;
+  padding-bottom: 3px;
   border: none;
   cursor: pointer;
-  background-color: #373F47;
-  box-shadow: 0px 0px 3px 2px var(--live-orange-color);
+  background-color: black!important;
+
 }
 
 .item-counter .counter-container .counter-btn p {
   color: #ffffff;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .item-counter .counter-container .counter-value {
   color: #ffffff;
   user-select: none;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .item-counter .btn {
-  width: 100%;
-  color: #373F47;
-  font-weight: 600;
+  width: 98%;
+  margin-left: 1%;
+  color: #202429;
+  font-weight: 600;;
   background-color: var(--live-orange-color);
 }

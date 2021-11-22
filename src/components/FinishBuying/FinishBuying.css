@@ -1,5 +1,4 @@
 .finish-buying {
-  background-color: #7A7A7A;
   padding: 5px;
 }
 
@@ -10,8 +9,10 @@
   color: #373F47;
   font-weight: 600;
   background-color: #0CCE6B;
-  width: 100%;
+  width: 98%;
+  margin-left: 1%;
   animation: appear 1.3s;
+  margin-bottom: 5px;
 }
 
 .finish-buying .btn:hover {
