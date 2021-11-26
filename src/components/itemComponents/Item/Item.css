@@ -9,7 +9,7 @@
   overflow: hidden;
   cursor: pointer;
   transition: .3s all;
-  width: 50vw;
+  width: 80vw;
   max-height: fit-content;
   margin-bottom: 40px;
 }

@@ -116,7 +116,9 @@ const BuyingForm = () => {
                     qty: item.quantity
                 })),
                 date:  firebase.firestore.Timestamp.fromDate( new Date()) ,
-                total: total
+                total: total,
+                entregado: false,
+                deliver:''
             };
 
             setLoading(true);
