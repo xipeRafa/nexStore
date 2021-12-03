@@ -73,6 +73,7 @@
 .services-container > div > h3 {
   font-size: 20px;
   font-weight: bold;
+  margin-top: 12px;
 }
 .services-container > div > p{
       font-size: 16px;

@@ -22,7 +22,7 @@ const Foother = () => {
         <section className="services" id="services">
           <div className="heading-foother">
             <span>Servicios</span>
-            <h2>Brindamos los mejores servicios</h2>
+            <h2>Brindamos los Mejores Servicios</h2>
           </div>
           <div className="services-container">
             {/* Box 1 */}
@@ -34,13 +34,13 @@ const Foother = () => {
             {/* Box 2 */}
             <div className="s-box">
               <img src={logo2} alt="bsn" /* style={{height: '100px', }} *//>
-              <h3>Gym products</h3>
+              <h3>Gym productos</h3>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit ea fugiat esse tempore ipsum temporibus.</p>
             </div>
             {/* Box 3 */}
             <div className="s-box">
               <img src={logo3} alt="shiping" />
-              <h3>Entregada</h3>
+              <h3>Entregas</h3>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit ea fugiat esse tempore ipsum temporibus.</p>
             </div>
           </div>
