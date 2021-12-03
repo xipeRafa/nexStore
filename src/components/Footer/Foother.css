@@ -22,7 +22,7 @@
   margin-top: 10px;
 }
 
-.btn {
+.btn-f {
   display: inline-block;
   background: var(--live-orange-color);
   border-radius: 0.5rem;
@@ -31,7 +31,7 @@
 
 }
 
-.btn:hover{
+.btn-f:hover{
       background-color: tomato;
 }
 
@@ -39,7 +39,7 @@
   .connect {
     flex-direction: column;
   }
-  .connect .btn {
+  .connect .btn-f {
     margin-top: 1rem;
   }
 }

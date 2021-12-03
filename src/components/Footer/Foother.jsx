@@ -14,8 +14,8 @@ const Foother = () => {
             <span>Let's Talk</span>
             <h2>Contactanos Ahora</h2>
           </div>
-          <div className="btn-talks">
-            <a href="#contact" className="btn">Contacto</a>
+          <div>
+            <a href="#contact" className="btn-f">Contacto</a>
           </div>
         </section>
         {/* Service */}
