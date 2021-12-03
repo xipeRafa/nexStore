@@ -25,6 +25,9 @@ import { useForm } from 'react-hook-form';
 
 //Css particular
 import './BuyingForm.css';
+//CSS core de Materialize
+import 'materialize-css/dist/css/materialize.min.css';
+
 
 const BuyingForm = () => {
 
@@ -42,6 +45,8 @@ const BuyingForm = () => {
     //Este state controla que se haya generado una id de compra
     const [newId, setNewId] = useState();
 
+    const[noDeliver, setNoDeliver]=useState(false)
+
     let history = useHistory();
 
     //Si el carrito no esta vacio entonces mando notificacion motivacional
@@ -51,12 +56,11 @@ const BuyingForm = () => {
         if (cart.length !== 0){
             motivationNotif()
         } 
-        
-        
+          
     }, [cart,history]);
 
 
-    const motivationNotif = () => {toast('Estas a solo un paso!! Completa los datos para coordinar la entrega del producto!!', {
+    const motivationNotif = () => {toast('Estas a solo un paso!! Completa los datos por favor', {
         position: "bottom-left",
         autoClose: 7500,
         hideProgressBar: false,
@@ -65,7 +69,7 @@ const BuyingForm = () => {
         draggable: true,
         progress: undefined
     })};
-    const purchaseNotif = () => {toast('Compra realizada con exito!!El codigo de pedido resaltado es el mas reciente', {
+    const purchaseNotif = () => {toast('Compra Realizada con exito!! ', {
         position: "bottom-left",
         autoClose: 7500,
         hideProgressBar: false,
@@ -84,7 +88,6 @@ const BuyingForm = () => {
         const bache = db.batch()
 
         cart.forEach( item => {
-
             bache.update(itemCollection.doc(item.id),{stock: item.stock - item.quantity})
         })
 
@@ -97,7 +100,7 @@ const BuyingForm = () => {
 
     }
 
-    const handleOrder = (data)=> {
+    const handleOrder = (data)=> { //==========================================================//
 
         if (data) {
 
@@ -118,7 +121,8 @@ const BuyingForm = () => {
                 date:  firebase.firestore.Timestamp.fromDate( new Date()) ,
                 total: total,
                 entregado: false,
-                deliver:''
+                deliver:'',
+                noDeliver:noDeliver
             };
 
             setLoading(true);
@@ -138,7 +142,6 @@ const BuyingForm = () => {
                 setError(err);
             })
             .finally(()=>{
-                
                 updateStocks();
                 purchaseNotif();
                 newId !== '' && history.push("/my-orders");
@@ -170,7 +173,7 @@ const BuyingForm = () => {
                                 required: "Ingresar nombre", minLength: {value:2, message:"Minimo 2 caracteres"}, maxLength: {value:12, message:"Maximo 12 caracteres"}
                             })}
                             />
-                        <label htmlFor="name" >Nombre</label>
+                        <label htmlFor="name">Nombre</label>
                         { errors.name && <small>{ errors.name.message }</small> }
                     </div>
 
@@ -183,16 +186,12 @@ const BuyingForm = () => {
                             className="validate" 
                             autoComplete="none" 
                             ref={register({
-                                required: "Ingresar direccion", minLength: {value:2, message:"Minimo 2 caracteres"}, maxLength: {value:60, message:"Maximo 60 caracteres"}
+                                required: "Ingresar direccion", minLength: {value:3, message:"Minimo 3 caracteres"}, maxLength: {value:60, message:"Maximo 60 caracteres"}
                             })}
                         />
                         <label htmlFor="adress">Direccion</label>
                         { errors.lastname && <small>{ errors.lastname.message }</small> }
                     </div>
-
-
-
-
 
                     <div className="input-field">
                         <i className="material-icons prefix">phone</i>
@@ -252,35 +251,48 @@ const BuyingForm = () => {
 
                     {/* Unica forma de que los autocomplete "none" funcionen fue agregando autoComplete = "none" a todos los inputs
                     y crear un ultimo input innecesario (display: none) con autoComplete='on' */}
+
                     <div className="input-field" style={{display: 'none'}}>
                         <i className="material-icons prefix">email</i>
                         <input id="asd" type="email" className="validate" autoComplete="on"/>
                         <label htmlFor="asd">Email</label>
                     </div>
+
                     {/* Fin de input innecesario :D */}
+
+                 
 
                     <h5 className="total-amount">
                         Subtotal &nbsp; ${ total }
                     </h5>
                     <span></span>
-                    {error && <p>{error}</p> }
+                    {error && <p>{error}</p>}
 
+                    <div className={noDeliver ? 'noDeliver' : 'noDeliver-false'}
+                            onClick={()=>setNoDeliver(!noDeliver)}>
+                       {noDeliver ? 'ire por el a la tienda' : 'Recoger en Tienda ?'}
+                    </div>
+                   
 
                     {
                         loading ? (
                             <button className="waves-effect btn btn-getOrder ">
                                 <div className="loop">
-                                    <i className="material-icons">loop </i>
+                                    <i className="material-icons">loop</i>
                                 </div>
                             </button>
                         ) : (
-                            <button disabled={ confirmEmail !== email } type="submit" className= "waves-effect btn btn-buy ">
+                            <button disabled={ confirmEmail !== email } type="submit" 
+                                    className= "waves-effect btn btn-buy ">
                                 Finalizar compra
                             </button>
                         )
                     }
 
+
+
                 </form>
+               
             </div>
         )
 
