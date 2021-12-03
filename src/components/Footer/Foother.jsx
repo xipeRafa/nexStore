@@ -54,24 +54,24 @@ const Foother = () => {
             <h3>NEXGYM</h3>
             <span>Sociales</span>
             <div className="social">
-              <li><a href="#"><i className="bx bxl-facebook" /></a></li>
-              <li><a href="#"><i className="bx bxl-twitter" /></a></li>
-              <li><a href="#"><i className="bx bxl-instagram" /></a></li>
+              <li><a><i className="bx bxl-facebook" /></a></li>
+              <li><a><i className="bx bxl-twitter" /></a></li>
+              <li><a><i className="bx bxl-instagram" /></a></li>
             </div>
           </div> 
           <div className="contact-box">
             <h3>Menu</h3>
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Nosotros</a></li>
-            <li><a href="#menu">Productos</a></li>
-            <li><a href="#services">Servicios</a></li>
+            <li><a>Inicio</a></li>
+            <li><a>Nosotros</a></li>
+            <li><a>Productos</a></li>
+            <li><a>Servicios</a></li>
           </div> 
           <div className="contact-box">
             <h3>Links</h3>
             <li><a href="#Contact">Contacto</a></li>
-            <li><a href="#Privacy Policy">Privacy Policy</a></li>
-            <li><a href="#Disclaimer">Disclaimer</a></li>
-            <li><a href="#Terms Of Use">Terms Of Use</a></li>
+            <li><a>Privacy Policy</a></li>
+            <li><a>Disclaimer</a></li>
+            <li><a>Terms Of Use</a></li>
           </div>
           <div className="contact-box address">
             <h3>Contacto</h3>
