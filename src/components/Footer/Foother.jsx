@@ -15,7 +15,7 @@ const Foother = () => {
             <h2>Contactanos Ahora</h2>
           </div>
           <div>
-            <a href="#contact" className="btn-f">Contacto</a>
+            <a href="#contact" className="btn-f btn">Contacto</a>
           </div>
         </section>
         {/* Service */}
