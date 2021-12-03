@@ -29,6 +29,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 //Css particular
 import './assets/styles/app.css'
 import './assets/styles/colors.css'
+import Foother from './components/Footer/Foother';
 
 
 const App = () => {
@@ -78,6 +79,7 @@ const App = () => {
                     <Route path="/order" component={BuyingForm}/>
                     <Route path="/my-orders" component={MyOrders}/>
                 </Switch>
+                <Foother />
             </CartProvider>
         </Router>
     ) 
