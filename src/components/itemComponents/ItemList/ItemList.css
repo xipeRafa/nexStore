@@ -8,11 +8,6 @@
   height: fit-content;
 }
 
-/* @media screen and (min-width: 540px) {
-  .ItemList {
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
 
 @media screen and (min-width: 767px) {
   .ItemList {
