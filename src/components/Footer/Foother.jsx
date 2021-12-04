@@ -15,7 +15,7 @@ const Foother = () => {
             <h2>Contactanos Ahora</h2>
           </div>
           <div>
-            <a href="#contact" className="btn-f btn">Contacto</a>
+            <a href="/#contact" className="btn-f btn">Contacto</a>
           </div>
         </section>
         {/* Service */}
@@ -68,7 +68,7 @@ const Foother = () => {
           </div> 
           <div className="contact-box">
             <h3>Links</h3>
-            <li><a href="#Contact">Contacto</a></li>
+            <li><a href="/#Contact">Contacto</a></li>
             <li><a>Privacy Policy</a></li>
             <li><a>Disclaimer</a></li>
             <li><a>Terms Of Use</a></li>

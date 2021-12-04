@@ -9,7 +9,8 @@
   overflow: hidden;
   cursor: pointer;
   transition: .3s all;
-  width: 60vw;
+  width: 236px;
+  max-width: 240px;
   max-height: fit-content;
   margin-bottom: 40px;
 }
@@ -41,7 +42,7 @@ img {
   text-align: center;
   margin-top: 10px;
 }
-@media screen and (min-width: 540px) {
+/* @media screen and (min-width: 540px) {
   .card-container {
       max-width: 30vw;
  }
@@ -55,4 +56,4 @@ img {
   .card-container {
       max-width: 17vw;
  }
-}
+} */
