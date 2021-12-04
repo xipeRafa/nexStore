@@ -157,7 +157,7 @@
 }
 .contact-box h3 {
   margin-bottom: 1rem;
-  color: white;
+  color: var(--live-orange-color);
   font-size: 20px;
   font-weight: bold;
 }
