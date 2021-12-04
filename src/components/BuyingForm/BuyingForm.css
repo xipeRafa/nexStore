@@ -5,7 +5,7 @@
   width: 100%;
   height: auto;
   min-height: 95vh;
-  padding: 5vh;
+  padding: 4vh 5vh;
 }
 
 .buy-form-container .form-container {
@@ -25,7 +25,7 @@
 
 .buy-form-container .form-container .input-field {
   width: 85%;
-  margin: 10px;
+  margin-top: 2px;
 }
 
 .buy-form-container .form-container .input-field input {
@@ -93,7 +93,7 @@
   font-weight: 600;
   background-color: var(--live-orange-color);
   width: 80%;
-  margin-top: 10%;
+  margin-top: 20px;
 }
 
 .buy-form-container .form-container .btn-buy .loop, .buy-form-container .form-container .btn-getOrder .loop {

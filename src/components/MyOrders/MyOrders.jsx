@@ -75,16 +75,16 @@ const MyOrders = () => {
 
             <div className="orders-container">
                 <div className="orders-organizer">
-                    <h3 className="title">Mis compras</h3>
+                    <h3 className="title">Mis Compras</h3>
     
-                    <button 
+                 {/*    <button 
                         className="waves-effect  waves-light btn"
                         onClick={()=> {
                             localStorage.removeItem('my-orders');
                             setOrderIds([])
                         }}>
                         Borrar historial
-                    </button>
+                    </button> */}
     
                     <div className="orders-columns">
                         <p>Fecha</p>

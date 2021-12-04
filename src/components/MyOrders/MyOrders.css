@@ -1,11 +1,11 @@
 .orders-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  background-color: #7A7A7A;
-  min-height: 90vh;
+  min-height: 80vh;
   width: 100%;
+  padding-top: 20px;
 }
 
 .orders-container .orders-organizer {
@@ -13,9 +13,8 @@
   flex-direction: column;
   box-shadow: 0px 0px 4px 3px #1f2226;
   overflow: hidden;
-  border-radius: 5px;
   width: 90%;
-  max-height: 80vh;
+  max-height: 70vh;
   background-color: var(--live-orange-color);
 }
 
@@ -26,6 +25,7 @@
   line-height: 10px;
   text-align: start;
   padding-left: 5%;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 540px) {

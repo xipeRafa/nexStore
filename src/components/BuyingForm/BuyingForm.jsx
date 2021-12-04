@@ -170,7 +170,7 @@ const BuyingForm = () => {
                             className="validate" 
                             autoComplete="none" 
                             ref={register({
-                                required: "Ingresar nombre", minLength: {value:2, message:"Minimo 2 caracteres"}, maxLength: {value:12, message:"Maximo 12 caracteres"}
+                                required: "Ingresar nombre", minLength: {value:2, message:"Minimo 2 caracteres"}, maxLength: {value:60, message:"Maximo 60 caracteres"}
                             })}
                             />
                         <label htmlFor="name">Nombre</label>
