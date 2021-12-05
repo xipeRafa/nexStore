@@ -17,7 +17,7 @@ import './MyOrders.css';
 
 const MyOrders = () => {
 
-    const { orderIds ,setOrderIds } = useContext(CartContext);
+    const { orderIds /* ,setOrderIds */ } = useContext(CartContext);
 
     const [ ordersInfo, setOrdersInfo ] = useState([]);
     const [ loading, setLoading ] = useState(true);

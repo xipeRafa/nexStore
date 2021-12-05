@@ -6,6 +6,7 @@ import M from 'materialize-css';
 
 //CSS core de Materialize
 import 'materialize-css/dist/css/materialize.min.css';
+import { useLocation } from "react-router-dom";
 
 //Componentes
 import NavBar from  './components/NavBar/NavBar.jsx';
@@ -30,6 +31,16 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './assets/styles/app.css'
 import './assets/styles/colors.css'
 import Foother from './components/Footer/Foother';
+
+function ScrollToTop() {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+        window.scrollTo({ top: 0 });
+    }, [pathname]);
+  
+    return null;
+  }
 
 
 const App = () => {
@@ -65,12 +76,12 @@ const App = () => {
     toast.configure();
 
 
-
     return(
         <Router>
+            <ScrollToTop />
+            <Heading /> 
             <CartProvider>
                 <NavBar/>
-                <Heading /> 
                 <Switch>
                     <Route path="/" exact component={ItemListContainer}/>
                     <Route path="/categories/:categoryId" component={ItemListContainer}/>
@@ -79,8 +90,8 @@ const App = () => {
                     <Route path="/order" component={BuyingForm}/>
                     <Route path="/my-orders" component={MyOrders}/>
                 </Switch>
-                <Foother />
             </CartProvider>
+            <Foother />
         </Router>
     ) 
 

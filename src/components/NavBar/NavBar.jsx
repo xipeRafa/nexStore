@@ -20,7 +20,7 @@ const NavBar = () => {
                     <NavLink to="/" className="brand-logo" exact >
                         <img src={logo} alt="NextGym" />
                     </NavLink>
-                    <a href="/#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+                    <a data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                     <ul className="right hide-on-med-and-down">
                         <li>
                             <NavLink to="/" className="navlink inicio"> INICIO </NavLink>
@@ -54,7 +54,7 @@ const NavBar = () => {
                     <NavLink to="/categories/articulos" className="navlink"> ARTICULOS </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/my-orders" className=" navlink " > PEDIDOS </NavLink>
+                    <NavLink to="/my-orders" className="navlink" > PEDIDOS </NavLink>
                 </li>
             </ul>
         </>
