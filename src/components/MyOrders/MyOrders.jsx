@@ -17,7 +17,7 @@ import './MyOrders.css';
 
 const MyOrders = () => {
 
-    const { orderIds /* ,setOrderIds */ } = useContext(CartContext);
+    const { orderIds ,setOrderIds  } = useContext(CartContext);
 
     const [ ordersInfo, setOrdersInfo ] = useState([]);
     const [ loading, setLoading ] = useState(true);
@@ -75,17 +75,17 @@ const MyOrders = () => {
 
             <div className="orders-container">
                 <div className="orders-organizer">
-                    <h3 className="title">Mis Compras</h3>
+                    <h3 className="title">Mis Compras{' '}
     
-                 {/*    <button 
-                        className="waves-effect  waves-light btn"
+                    <button 
+                        className="waves-effect waves-light btn"
                         onClick={()=> {
                             localStorage.removeItem('my-orders');
                             setOrderIds([])
                         }}>
-                        Borrar historial
-                    </button> */}
-    
+                        Borrar
+                    </button> 
+                    </h3>
                     <div className="orders-columns">
                         <p>Fecha</p>
                         <p>Productos</p>

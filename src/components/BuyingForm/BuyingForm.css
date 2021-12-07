@@ -83,7 +83,7 @@
 
 .buy-form-container .form-container span {
   background-color: var(--live-orange-color);
-  width: 70%;
+  width: 90%;
   height: 3px;
   border-radius: 1.5px;
 }
@@ -163,4 +163,15 @@
   border-radius: 3px;
   background-color: lightgray;
   margin-top: 4px;
+}
+
+.sel{
+  width: 300px;
+}
+.sele{
+  width: 93%;
+  margin-left: 3%;
+}
+.dn{
+  display: none;
 }

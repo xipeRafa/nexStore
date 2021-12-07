@@ -59,6 +59,13 @@ const BuyingForm = () => {
           
     }, [cart,history]);
 
+    /* ===================================== selec sucursal ======================= */
+
+    const [selectState, setSelectState] = useState([]);
+
+    const handleSelect = (e) => {
+      setSelectState(e.target.value);
+    }
 
     const motivationNotif = () => {toast('Estas a solo un paso!! Completa los datos por favor', {
         position: "bottom-left",
@@ -122,7 +129,8 @@ const BuyingForm = () => {
                 total: total,
                 entregado: false,
                 deliver:'',
-                noDeliver:noDeliver
+                noDeliver:noDeliver,
+                sucursal:selectState
             };
 
             setLoading(true);
@@ -268,10 +276,26 @@ const BuyingForm = () => {
                     <span></span>
                     {error && <p>{error}</p>}
 
-                    <div className={noDeliver ? 'noDeliver' : 'noDeliver-false'}
-                            onClick={()=>setNoDeliver(!noDeliver)}>
-                       {noDeliver ? 'ire por el a la tienda' : 'Recoger en Tienda ?'}
+                    <div className={noDeliver ? 'input-field sel' : 'dn'}>
+                        <select className="browser-default sele" onChange={handleSelect} value={selectState}>
+                            <option value="" disabled selected>Elija una sucursal</option>
+                            <option value="cseri">Camino del Seri</option>
+                            <option value="quiroga">quiroga</option>
+                            <option value="perisur">perisur</option>
+                            <option value="progreso">progreso</option>
+                            <option value="navojoa">navojoa</option>
+                        </select>
                     </div>
+
+
+                    <div className={noDeliver ? 'noDeliver' : 'noDeliver-false'}
+                         onClick={()=>setNoDeliver(!noDeliver)}>
+                            {noDeliver ? 'ire por el a la tienda' : 'Recoger en Tienda ?'}
+                    </div>
+
+                   
+
+
                    
 
                     {
@@ -288,8 +312,6 @@ const BuyingForm = () => {
                             </button>
                         )
                     }
-
-
 
                 </form>
                
