@@ -69,15 +69,12 @@
   font-weight: 600;
   background-color: var(--live-orange-color);
   min-width: 50%;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
   max-width: fit-content;
-  height: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2px;
 }
 @media screen and (max-width: 840px) {
   .cart-container .cart .cart-total .btn, .cart-container-empty .cart .cart-total .btn {
@@ -104,5 +101,4 @@
   font-weight: 600;
   background-color: var(--live-orange-color);
   height: 10vh;
-
 }

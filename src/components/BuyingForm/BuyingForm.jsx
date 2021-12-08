@@ -59,12 +59,18 @@ const BuyingForm = () => {
           
     }, [cart,history]);
 
-    /* ===================================== selec sucursal ======================= */
+    /* ===================================== selects ======================= */
 
     const [selectState, setSelectState] = useState([]);
 
     const handleSelect = (e) => {
       setSelectState(e.target.value);
+    }
+
+    const [selectCity, setSelectCity] = useState([]);
+
+    const handleSelectCity = (e) => {
+      setSelectCity(e.target.value);
     }
 
     const motivationNotif = () => {toast('Estas a solo un paso!! Completa los datos por favor', {
@@ -130,6 +136,7 @@ const BuyingForm = () => {
                 entregado: false,
                 deliver:'',
                 noDeliver:noDeliver,
+                city:selectCity,
                 sucursal:selectState
             };
 
@@ -199,6 +206,14 @@ const BuyingForm = () => {
                         />
                         <label htmlFor="adress">Direccion</label>
                         { errors.lastname && <small>{ errors.lastname.message }</small> }
+                    </div>
+
+                    <div className='input-field'>
+                        <select className="browser-default city" onChange={handleSelectCity} value={selectCity}>
+                            <option value="" disabled selected>Elija su Ciudad</option>
+                            <option value="hermosillo">Hermosillo</option>
+                            <option value="navojoa">Navojoa</option>
+                        </select>
                     </div>
 
                     <div className="input-field">
@@ -278,12 +293,12 @@ const BuyingForm = () => {
 
                     <div className={noDeliver ? 'input-field sel' : 'dn'}>
                         <select className="browser-default sele" onChange={handleSelect} value={selectState}>
-                            <option value="" disabled selected>Elija una sucursal</option>
+                            <option value="" disabled selected>Elija una Sucursal</option>
                             <option value="cseri">Camino del Seri</option>
-                            <option value="quiroga">quiroga</option>
-                            <option value="perisur">perisur</option>
-                            <option value="progreso">progreso</option>
-                            <option value="navojoa">navojoa</option>
+                            <option value="quiroga">Quiroga</option>
+                            <option value="perisur">Perisur</option>
+                            <option value="progreso">Progreso</option>
+                            <option value="navojoa">Navojoa</option>
                         </select>
                     </div>
 
@@ -292,11 +307,6 @@ const BuyingForm = () => {
                          onClick={()=>setNoDeliver(!noDeliver)}>
                             {noDeliver ? 'ire por el a la tienda' : 'Recoger en Tienda ?'}
                     </div>
-
-                   
-
-
-                   
 
                     {
                         loading ? (
