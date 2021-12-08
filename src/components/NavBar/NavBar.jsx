@@ -20,7 +20,9 @@ const NavBar = () => {
                     <NavLink to="/" className="brand-logo" exact >
                         <img src={logo} alt="NextGym" />
                     </NavLink>
-                    <a data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+                    <a data-target="mobile-demo" className="sidenav-trigger">
+                        <i className="material-icons">menu</i>
+                    </a>
                     <ul className="right hide-on-med-and-down">
                         <li>
                             <NavLink to="/" className="navlink inicio"> INICIO </NavLink>
@@ -43,9 +45,7 @@ const NavBar = () => {
             {/* Mismo menu pero cuando esta colapsado para mobile */}
             <ul className="sidenav sidenav-close" id="mobile-demo" >
                 <li>
-                    <NavLink to="/" className="navlink" exact >
-                                INICIO
-                    </NavLink>
+                    <NavLink to="/" className="navlink" exact >INICIO</NavLink>
                 </li>
                 <li>
                     <NavLink to="/categories/suplementos" className="navlink"> SUPLEMENTOS </NavLink>

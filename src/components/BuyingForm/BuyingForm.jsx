@@ -209,6 +209,7 @@ const BuyingForm = () => {
                     </div>
 
                     <div className='input-field'>
+                        <i className="material-icons prefix">directions</i>
                         <select className="browser-default city" onChange={handleSelectCity} value={selectCity}>
                             <option value="" disabled selected>Elija su Ciudad</option>
                             <option value="hermosillo">Hermosillo</option>
