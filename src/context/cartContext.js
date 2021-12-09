@@ -46,7 +46,12 @@ export const CartProvider = ({ children }) => {
         price: obj.price,
         img: obj.img,
         id: obj.id,
-        stock: obj.stock
+        stock: obj.stock,
+        perisur: obj.perisur,
+        quiroga: obj.quiroga,
+        navojoa: obj.navojoa,
+        cseri: obj.cseri,
+        progreso: obj.progreso
       });
     } else {
       setCart([
@@ -57,7 +62,12 @@ export const CartProvider = ({ children }) => {
           price: obj.price,
           img: obj.img,
           id: obj.id,
-          stock: obj.stock
+          stock: obj.stock,
+          perisur: obj.perisur,
+          quiroga: obj.quiroga,
+          navojoa: obj.navojoa,
+          cseri: obj.cseri,
+          progreso: obj.progreso
         }
       ]);
     }

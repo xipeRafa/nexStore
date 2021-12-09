@@ -61,13 +61,14 @@ const BuyingForm = () => {
 
     /* ===================================== selects ======================= */
 
-    const [selectState, setSelectState] = useState([]);
+    const [selectState, setSelectState] = useState('');
+    console.log(selectState)
 
     const handleSelect = (e) => {
       setSelectState(e.target.value);
     }
 
-    const [selectCity, setSelectCity] = useState([]);
+    const [selectCity, setSelectCity] = useState('');
 
     const handleSelectCity = (e) => {
       setSelectCity(e.target.value);
@@ -101,8 +102,12 @@ const BuyingForm = () => {
         const bache = db.batch()
 
         cart.forEach( item => {
-            bache.update(itemCollection.doc(item.id),{stock: item.stock - item.quantity})
+            bache.update(itemCollection.doc(item.id),{
+                stock: item.stock - item.quantity,
+                [selectState]: item[selectState] - item.quantity
+            })
         })
+        console.log(cart)
 
         bache
         .commit()

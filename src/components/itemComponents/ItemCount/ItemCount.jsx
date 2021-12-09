@@ -96,7 +96,12 @@ const ItemCount = ({ setIsAdded, initial, stock, item }) => {
                                 price: item.price, 
                                 img: item.pictureUrl[0], 
                                 id: item.id, 
-                                stock: item.stock 
+                                stock: item.stock,
+                                perisur: item.perisur,
+                                quiroga: item.quiroga,
+                                navojoa: item.navojoa,
+                                cseri: item.cseri,
+                                progreso: item.progreso 
                         });
                         setCounter(initial);
                         setIsAdded(true);
