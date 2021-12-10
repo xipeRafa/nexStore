@@ -52,7 +52,6 @@ export const CartProvider = ({ children }) => {
         navojoa: obj.navojoa,
         cseri: obj.cseri,
         progreso: obj.progreso,
-        stock:obj.stock
       });
     } else {
       setCart([
@@ -69,7 +68,6 @@ export const CartProvider = ({ children }) => {
           navojoa: obj.navojoa,
           cseri: obj.cseri,
           progreso: obj.progreso,
-          stock:obj.stock
         }
       ]);
     }

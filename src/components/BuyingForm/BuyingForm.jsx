@@ -147,7 +147,8 @@ const BuyingForm = () => {
                 deliver:'',
                 noDeliver:noDeliver,
                 city:selectCity,
-                sucursal:selectState
+                sucursal:selectState,
+                taken:false
             };
 
             setLoading(true);
