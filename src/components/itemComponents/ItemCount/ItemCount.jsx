@@ -101,7 +101,8 @@ const ItemCount = ({ setIsAdded, initial, stock, item }) => {
                                 quiroga: item.quiroga,
                                 navojoa: item.navojoa,
                                 cseri: item.cseri,
-                                progreso: item.progreso 
+                                progreso: item.progreso, 
+                                stock:item.stock
                         });
                         setCounter(initial);
                         setIsAdded(true);

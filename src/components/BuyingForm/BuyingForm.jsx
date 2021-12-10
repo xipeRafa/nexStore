@@ -138,7 +138,8 @@ const BuyingForm = () => {
                     quiroga:item.quiroga,
                     perisur:item.perisur,
                     progreso:item.progreso,
-                    navojoa:item.navojoa
+                    navojoa:item.navojoa,
+                    stock:item.stock
                 })),
                 date:  firebase.firestore.Timestamp.fromDate( new Date()) ,
                 total: total,

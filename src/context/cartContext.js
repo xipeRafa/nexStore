@@ -51,7 +51,8 @@ export const CartProvider = ({ children }) => {
         quiroga: obj.quiroga,
         navojoa: obj.navojoa,
         cseri: obj.cseri,
-        progreso: obj.progreso
+        progreso: obj.progreso,
+        stock:obj.stock
       });
     } else {
       setCart([
@@ -67,7 +68,8 @@ export const CartProvider = ({ children }) => {
           quiroga: obj.quiroga,
           navojoa: obj.navojoa,
           cseri: obj.cseri,
-          progreso: obj.progreso
+          progreso: obj.progreso,
+          stock:obj.stock
         }
       ]);
     }
