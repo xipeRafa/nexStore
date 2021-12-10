@@ -62,7 +62,6 @@ const BuyingForm = () => {
     /* ===================================== selects ======================= */
 
     const [selectState, setSelectState] = useState('');
-    console.log(selectState)
 
     const handleSelect = (e) => {
       setSelectState(e.target.value);
@@ -102,10 +101,10 @@ const BuyingForm = () => {
         const bache = db.batch()
 
         cart.forEach( item => {
-            bache.update(itemCollection.doc(item.id),{
-                stock: item.stock - item.quantity,
-                [selectState]: item[selectState] - item.quantity
-            })
+            bache.update(itemCollection.doc(item.id),{stock: item.stock - item.quantity})
+            if(selectState !== ''){
+                bache.update(itemCollection.doc(item.id),{[selectState]: item[selectState] - item.quantity})
+            }  
         })
         console.log(cart)
 
@@ -134,7 +133,12 @@ const BuyingForm = () => {
                     id: item.id,
                     item: item.item,
                     price: item.price,
-                    qty: item.quantity
+                    qty: item.quantity,
+                    cseri:item.cseri,
+                    quiroga:item.quiroga,
+                    perisur:item.perisur,
+                    progreso:item.progreso,
+                    navojoa:item.navojoa
                 })),
                 date:  firebase.firestore.Timestamp.fromDate( new Date()) ,
                 total: total,
@@ -164,7 +168,7 @@ const BuyingForm = () => {
             .finally(()=>{
                 updateStocks();
                 purchaseNotif();
-                newId !== '' && history.push("/my-orders");
+                newId !== '' && history.push("/");
             })
         }
     };
